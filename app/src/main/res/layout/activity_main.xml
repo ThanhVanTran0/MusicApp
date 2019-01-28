@@ -28,16 +28,16 @@
             android:textAllCaps="true"
             android:textColor="@android:color/white"
             android:textSize="18sp"
-            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:fontFamily="@font/source_sans_pro_bold"
             />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/list_popular"
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="200dp"
             android:padding="10dp"
-            android:scrollbars="horizontal"
-            android:layout_marginTop="10dp"
+            android:scrollbars="none"
+            android:layout_marginTop="5dp"
             >
 
         </android.support.v7.widget.RecyclerView>
@@ -53,16 +53,16 @@
             android:textAllCaps="true"
             android:textColor="@android:color/white"
             android:textSize="18sp"
-            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:fontFamily="@font/source_sans_pro_bold"
             />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/my_list"
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="200dp"
             android:padding="10dp"
             android:scrollbars="horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
 
             >
 

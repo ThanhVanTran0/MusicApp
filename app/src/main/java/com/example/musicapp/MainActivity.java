@@ -7,17 +7,28 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.musicapp.Adapter.MyAdapter;
+import com.example.musicapp.Model.PlayList;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar mToolBar;
     private TextView mToolBar_title;
     private DrawerLayout mDrawerLayout;
+    private RecyclerView mPopularRecycler;
+    private MyAdapter mPopularAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(mToolBar);
         mToolBar_title = findViewById(R.id.toolbar_title);
         mToolBar_title.setText("Library");
-
         ActionBar actionBar = getSupportActionBar();
         if(actionBar != null) {
             actionBar.setDisplayShowTitleEnabled(false);
@@ -50,6 +60,18 @@ public class MainActivity extends AppCompatActivity {
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_home);
         }
 
+        mPopularRecycler = findViewById(R.id.list_popular);
+        List<PlayList> listPopular = new ArrayList<>();
+        listPopular.add(new PlayList("0", "Radwimps","Sparkle", ""));
+        listPopular.add(new PlayList("1", "Dewa 19","Kangen", ""));
+        listPopular.add(new PlayList("2", "Uut Sely","Kopi susu", ""));
+        mPopularAdapter = new MyAdapter(listPopular);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
+        mPopularRecycler.setLayoutManager(mLayoutManager);
+        mPopularRecycler.setItemAnimator(new DefaultItemAnimator());
+        mPopularRecycler.setAdapter(mPopularAdapter);
+
+        mPopularAdapter.notifyDataSetChanged();
     }
 
     @Override
