@@ -1,5 +1,6 @@
-package com.example.musicapp;
+package com.example.musicapp.Activity;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,14 +19,13 @@ import android.widget.Toast;
 
 import com.example.musicapp.Adapter.MyAdapter;
 import com.example.musicapp.Model.PlayList;
+import com.example.musicapp.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
-    private Toolbar mToolBar;
-    private TextView mToolBar_title;
     private DrawerLayout mDrawerLayout;
     private RecyclerView mPopularRecycler;
     private MyAdapter mPopularAdapter;
@@ -34,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = new Intent(MainActivity.this, PlayListDetailActivity.class);
+        startActivity(intent);
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -48,17 +51,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        mToolBar = findViewById(R.id.m_toolbar);
-        setSupportActionBar(mToolBar);
-        mToolBar_title = findViewById(R.id.toolbar_title);
-        mToolBar_title.setText("Library");
-        ActionBar actionBar = getSupportActionBar();
-        if(actionBar != null) {
-            actionBar.setDisplayShowTitleEnabled(false);
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_home);
+        initToolbar("Library");
+        if(getSupportActionBar() != null)
+        {
+                getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu_home);
         }
+
 
         mPopularRecycler = findViewById(R.id.list_popular);
         List<PlayList> listPopular = new ArrayList<>();
@@ -75,20 +73,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        return true;
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
         switch (id) {
-            case R.id.action_find: {
-                Toast.makeText(MainActivity.this, "Action clicked", Toast.LENGTH_LONG).show();
-                return true;
-            }
             case android.R.id.home : {
                 mDrawerLayout.openDrawer(GravityCompat.START);
                 return true;

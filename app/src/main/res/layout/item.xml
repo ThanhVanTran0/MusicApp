@@ -2,11 +2,11 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="180dp"
-    android:layout_height="180dp"
+    android:layout_width="@dimen/item_playlist_width"
+    android:layout_height="@dimen/item_playlist_height"
     android:orientation="vertical"
     android:layout_weight="9"
-    android:padding="5dp"
+    android:paddingRight="@dimen/item_play_list_padding"
     android:background="@color/background"
     >
     
@@ -25,7 +25,7 @@
         android:layout_weight="1"
         android:text="title"
         android:textColor="@android:color/white"
-        android:textSize="16sp"
+        android:textSize="@dimen/text_size"
         app:fontFamily="@font/source_sans_pro_bold"
         />
 
@@ -37,6 +37,6 @@
         android:layout_weight="1"
         android:text="subtitle"
         android:textColor="@android:color/darker_gray"
-        android:textSize="14dp"
+        android:textSize="@dimen/sub_text_size"
         />
 </LinearLayout>

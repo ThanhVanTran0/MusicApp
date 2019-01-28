@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_play_list_padding">8dp</dimen>
+    <dimen name="text_size">18sp</dimen>
+    <dimen name="sub_text_size">16sp</dimen>
+    <dimen name="item_playlist_width">180dp</dimen>
+    <dimen name="item_playlist_height">180dp</dimen>
+    <dimen name="playlists_height">200dp</dimen>
+    <dimen name="menu_play_height">150dp</dimen>
+    <dimen name="padding">5dp</dimen>
+</resources>

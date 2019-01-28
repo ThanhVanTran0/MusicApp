@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:padding="5dp"
+    android:orientation="horizontal"
+    android:background="@color/background"
+    >
+
+    <ImageView
+        android:id="@+id/music_row_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true"
+        android:src="@color/colorAccent"
+        android:layout_marginRight="5dp"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/music_row_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Galileo Galilei"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/music_row_sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Sub title"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/sub_text_size"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/music_row_time"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="04:10"
+        android:padding="5dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/sub_text_size"
+        android:layout_gravity="center_vertical"
+        />
+    <Button
+        android:id="@+id/btn_more"
+        android:layout_width="25dp"
+        android:layout_height="8dp"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/ic_more_setting"
+        />
+
+</LinearLayout>

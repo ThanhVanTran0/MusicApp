@@ -27,14 +27,14 @@
             android:text="Popular"
             android:textAllCaps="true"
             android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:fontFamily="@font/source_sans_pro_bold"
             />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/list_popular"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="@dimen/playlists_height"
             android:padding="10dp"
             android:scrollbars="none"
             android:layout_marginTop="5dp"
@@ -52,14 +52,14 @@
             android:text="My Playlist"
             android:textAllCaps="true"
             android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:fontFamily="@font/source_sans_pro_bold"
             />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/my_list"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="@dimen/playlists_height"
             android:padding="10dp"
             android:scrollbars="horizontal"
             android:layout_marginTop="5dp"
