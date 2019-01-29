@@ -35,7 +35,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = new Intent(MainActivity.this, PlayListDetailActivity.class);
+        Intent intent = new Intent(MainActivity.this, PlayingActivity.class);
         startActivity(intent);
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
