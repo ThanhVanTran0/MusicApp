@@ -91,16 +91,18 @@
                     android:layout_toRightOf="@+id/btn_repeart"
                     android:background="@drawable/ic_love" />
 
-                <android.support.design.widget.FloatingActionButton
+                <ImageButton
                     android:id="@+id/btn_play_stop"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_below="@+id/music_sub_title"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="9dp"
+                    android:layout_marginTop="-2dp"
                     android:layout_toEndOf="@+id/btn_love"
-                    android:layout_toRightOf="@+id/btn_love" />
+                    android:layout_toRightOf="@+id/btn_love"
+                    android:background="@drawable/test"
+                    android:src="@drawable/ic_music_select" />
 
                 <Button
                     android:id="@+id/btn_next"

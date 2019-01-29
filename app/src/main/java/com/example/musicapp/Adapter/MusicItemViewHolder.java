@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.example.musicapp.R;
 
-public class MusicItemViewHolder extends RecyclerView.ViewHolder {
+public class MusicItemViewHolder extends MyViewHolder{
 
     public ImageView img;
     public TextView mTitle, mSubTitle, mTime;

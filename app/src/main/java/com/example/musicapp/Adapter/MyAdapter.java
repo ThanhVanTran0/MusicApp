@@ -17,7 +17,7 @@ import com.example.musicapp.R;
 
 import java.util.List;
 
-public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
+public class MyAdapter extends RecyclerView.Adapter<PlayListItemViewHolder> {
     private List<PlayList> playListList;
     private Context context;
     private int imgResource = R.drawable.img_test;
@@ -30,14 +30,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public PlayListItemViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         this.context = viewGroup.getContext();
         View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item,viewGroup, false);
-        return new MyViewHolder(itemView);
+        return new PlayListItemViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
+    public void onBindViewHolder(@NonNull PlayListItemViewHolder myViewHolder, int i) {
         PlayList item = playListList.get(i);
         myViewHolder.SetItemClickListener(new ItemClickListener() {
             @Override
@@ -59,10 +59,5 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     @Override
     public int getItemCount() {
         return playListList.size();
-    }
-
-    public interface ItemClickListener {
-        void OnClick(int position, View v);
-        void OnLongClick(int position, View v);
     }
 }
