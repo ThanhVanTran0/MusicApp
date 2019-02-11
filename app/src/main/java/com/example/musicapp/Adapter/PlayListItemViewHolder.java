@@ -1,6 +1,7 @@
 package com.example.musicapp.Adapter;
 
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;

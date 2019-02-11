@@ -35,8 +35,8 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = new Intent(MainActivity.this, PlayingActivity.class);
-        startActivity(intent);
+//        Intent intent = new Intent(MainActivity.this, PlayingActivity.class);
+//        startActivity(intent);
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -62,6 +62,9 @@ public class MainActivity extends BaseActivity {
         List<PlayList> listPopular = new ArrayList<>();
         listPopular.add(new PlayList("0", "Radwimps","Sparkle", ""));
         listPopular.add(new PlayList("1", "Dewa 19","Kangen", ""));
+        listPopular.add(new PlayList("2", "Uut Sely","Kopi susu", ""));
+        listPopular.add(new PlayList("2", "Uut Sely","Kopi susu", ""));
+        listPopular.add(new PlayList("2", "Uut Sely","Kopi susu", ""));
         listPopular.add(new PlayList("2", "Uut Sely","Kopi susu", ""));
         mPopularAdapter = new MyAdapter(listPopular);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
